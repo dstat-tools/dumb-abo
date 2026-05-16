@@ -1,12 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Dumb Abo (für derstandard.at)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unlocks the paywalled comment sort tabs (Plus, Minus, Älteste, …) in derstandard.at's forum.",
   "browser_specific_settings": {
     "gecko": {
       "id": "dumb-abo@dstat-tools",
-      "strict_min_version": "128.0"
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "icons": {
