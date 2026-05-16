@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# JetBrains
+.idea/
+
+# Claude Code (per-user, not for sharing)
+.claude/
+
+# Packaged extension builds (created when zipping for AMO/CWS upload)
+*.xpi
+*.zip
+web-ext-artifacts/
