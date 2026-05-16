@@ -1,0 +1,36 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify manifest version matches tag
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          manifest="$(jq -r .version manifest.json)"
+          if [ "$tag" != "$manifest" ]; then
+            echo "Tag $tag does not match manifest.json version $manifest" >&2
+            exit 1
+          fi
+
+      - name: Package
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          zip -r "dumb-abo-${version}.zip" \
+            manifest.json src/ icons/dumb-abo-*.png LICENSE \
+            -x '*/.DS_Store'
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dumb-abo-*.zip
+          generate_release_notes: true
