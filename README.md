@@ -13,7 +13,7 @@ extension flips that short-circuit and lets the fetch through.
 
 ## Install
 
-- **Firefox** — [addons.mozilla.org/firefox/addon/dumb-abo](https://addons.mozilla.org/firefox/addon/dumb-abo) <!-- TODO: confirm slug after AMO review -->
+- **Firefox** — [addons.mozilla.org/firefox/addon/dumb-abo-für-derstandard-at](https://addons.mozilla.org/firefox/addon/dumb-abo-für-derstandard-at)
 - **Chrome / Chromium / Edge** — [Chrome Web Store listing](https://chromewebstore.google.com/) <!-- TODO: paste CWS URL after review -->
 
 After install, open any `derstandard.at/story/...` article and scroll to
